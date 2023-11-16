@@ -1,0 +1,15 @@
+#PBS -N tcfrVs1d-2
+#PBS -r n
+#PBS -q altixq
+#PBS -l walltime=120:00:00
+#PBS -l nodes=2:ppn=1
+#PBS -m abe
+#PBS -M mrugeshs@ufl.edu
+#PBS -l pmem=300mb
+
+cd /scratch/crn/mrugeshs/spectral_code/TCFR/Re180Th5Sc1Vs1d-2-96-96-97
+
+export OMP_NUM_THREADS=`cat $PBS_NODEFILE | wc -l`
+
+./run 
+

@@ -1,0 +1,56 @@
+Timers are used if the input value of oi_timer is positive, in which
+case, timing information is output every "oi_timer" time steps, as well
+as at the end of the run.
+
+The number of possible timers is controlled by max_timers in timers.inc,
+which must be at least as large as the largest index below.
+
+10:  initial
+20:  courant
+25:  divg
+30:  output
+32:  sm_output
+35:  
+36:  output_2d_scal
+37:  output_2d_vect
+40:  advance: (normal call only: code = 0)
+42:  advance: fluid part (except sections)
+43:  advance: sections part
+48:  advance: conc part
+49:  doout
+50:  rhs less viscous part
+51:  rhs: odd time part
+52:  rhs: even time part
+53:  rhs: viscous part
+54:  tt_rhs
+55:  sm_rhs
+60:  helmholz
+61:  tt_helmholz
+62:  sm_helmholz
+65:  pstep
+70:  fft_r2f_2d
+71:  fftl_r2r_2d
+72:  enlarge
+73:  reduce
+75:  fft_f2r_2d
+76:  fftl_f2r_2d
+78:  multiply
+80:  ddx
+82:  ddy
+84:  ddz
+85:  ddz_f
+86:  ddt
+87:  comp_vort
+88:  tranyz
+89:  zerbnds
+90:  viscxyz
+91:  make_mean2d_scal
+92:  make_mean2d_axi_vect 
+93:  comp_bott_shear 
+94:  comp_dissip 
+95:  comp_tke 
+96:  make_output_1d 
+110: make_spec
+112: make_msq
+115: make_gbalrhs
+118: make_sm_means

@@ -1,0 +1,20 @@
+This directory contains a f77 code that simulates a fluid flow between
+two no-slip/slip walls (z-direction), which is periodic in the x and y
+directions.  It can also evolve a temperature field with mixed BC, ie
+ 
+ ttab tt + ttbb @tt/@z = ttgb
+ ttat tt + ttbt @tt/@z = ttgt
+
+The code uses libraries ESSL/SCSL/FFTW3, and select between the at 
+compilation time using C pre-processing. See Makefile for details.
+
+Further information is in the following files:
+
+README_eqns: the equations solved for velocity, temperature,
+             smoke and particles
+
+README_gbal: equations for global balances of fluid quantities
+
+README_time: definitions of the timers
+
+rplus is added

@@ -1,0 +1,24 @@
+#MAIN
+ch_file 
+sp_file
+rlenx, rleny, rlenz, slipb, slipt
+istart iters ch_fin m_fin
+oi_chan out_press
+oi_timer oi_cfl oi_spec oi_mean oi_gbal oi_1d
+re ppA dt cflmax ppT theta
+kts(1) to kts(8)
+tt_yes 
+#END_MAIN
+#THRM       (section present if tt_yes.ne.0)
+tt_file 
+pr ra Tmax    
+ttab ttat 
+ttbb ttbt
+ttgb ttgt 
+w_settling rey_p
+#END_THRM
+#SP_VISC
+epssvx epssvy
+msvx msvy
+#END_SP_VISC
+

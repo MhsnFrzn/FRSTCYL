@@ -1,0 +1,51 @@
+We solve the following set of equations
+
+**************************************
+
+Fluid velocity:
+
+  div u = 0
+
+  Du                 Ra               1
+  -- = -grad p + ---------- tt ez +  --- lap u 
+  Dt             16 Re^2 Pr           Re
+
+with
+
+  u = 0 at z = -1 and z = 1,
+
+where the mean value of grad p is some constant k:
+
+  k = 1 for standard channel flow
+  k = 0 for standard thermal convection.
+
+u   = fluid velocity
+p   = fluid pressure
+tt  = fluid temperature (see below)
+
+Re  = Reynolds number based on wall friction
+Pr  = Prandtl number (= nu/kappa)
+Ra  = Rayleigh number (normalized to standard thermal
+      convection usage:  e.g., Ra_crit = 1707.762)
+R   = rho_p/rho - 1
+Tmax= scale for void fraction
+w_s = settling velocity
+
+ez = (0,0,1)
+
+**************************************
+
+Fluid temperature:
+
+  Dtt     1          
+  --- = ----- lap tt 
+  Dt    Re Pr           
+
+where tt is advected with the particles velocity.
+
+The BC are:
+
+ ttab tt + ttbb @tt/@z = ttgb
+ ttat tt + ttbt @tt/@z = ttgt
+
+**************************************

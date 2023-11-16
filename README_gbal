@@ -1,0 +1,66 @@
+*** Global balances ***
+
+Notation:
+
+  (most of the notation is described in README_eqns)
+
+  [f]   = the box average of f
+
+  xy(f) = average of f over x and y (streamwise and spanwise directions)
+
+  @/@z  = partial derivative with respect to z
+
+
+We consider the balances of three quantities:
+
+                           
+  Potential energy = PE =  Re Pr [-z Tf]
+
+                           Re Pr
+  Thermal   energy = TE =  ----- [tt^2]
+                             2
+
+                           1
+  Kinetic   energy = KE =  - [|u|^2]
+                           2
+
+The balances of the two thermal quantities are:
+
+  d PE
+  ---- =  Nu_bndy - Nu_conv
+   dt
+
+  d TE
+  ---- =  Nu_conv - Nu_diss
+   dt
+
+where the three instantaneous Nusselt numbers are defined as
+
+               1    @ xy(Tf) |         @ xy(Tf) |
+  Nu_bndy =  - - (  -------- |      +  -------- |      ) 
+               2       @z    | z=1        @z    | z=-1
+
+             
+  Nu_conv =  Re Pr [u_3 Tf] + 1
+
+
+  Nu_diss =  [|grad Tf|^2]
+
+
+The balance of kinetic energy is given by
+
+  d KE
+  ---- =  Prod + Conv - Diss
+   dt
+
+where
+
+  Prod = k [u_1]
+
+              Ra
+  Conv = ------------ ( Nu_conv - 1 )
+         16 Re^3 Pr^2
+
+         1
+  Diss = -- [|grad u|^2]
+         Re
